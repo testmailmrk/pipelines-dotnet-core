@@ -17,7 +17,8 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
-- task: DotNetCoreCLI@3
+- task: DotNetCoreCLI@2
+  displayName: Dotnet App Publish
   inputs:
     command: 'publish'
     publishWebProjects: true
