@@ -30,7 +30,7 @@ steps:
     azureSubscription: 'Azure subscription 1(79ddd584-fdcc-46f0-a201-914b3822b05a)'
     appType: 'webAppLinux'
     appName: 'samplewebapp'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
     runtimeStack: 'DOTNETCORE|3.0'
 
 
