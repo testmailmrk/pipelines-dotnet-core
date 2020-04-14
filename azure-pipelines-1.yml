@@ -17,11 +17,10 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
-- task: DotNetCoreCLI@2
+- task: DotNetCoreCLI@3
   inputs:
-    command: 'pack'
-    packagesToPack: '**/*.csproj'
-    versioningScheme: 'off'
+    command: 'publish'
+    publishWebProjects: true
     
 - task: AzureWebApp@1
   displayName: Azure Web App Deploy
