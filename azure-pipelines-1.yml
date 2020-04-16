@@ -18,11 +18,11 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
-  displayName: Dotnet App Publish
   inputs:
     command: 'publish'
     publishWebProjects: true
-    zipAfterPublish: true
+    arguments: '--output $(Build.ArtifactStagingDirectory)'
+    modifyOutputPath: false
   
     
 - task: AzureWebApp@1
