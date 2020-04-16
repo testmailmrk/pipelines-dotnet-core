@@ -23,7 +23,7 @@ steps:
     command: 'publish'
     publishWebProjects: true
     zipAfterPublish: true
-    packDirectory: '$(Build.ArtifactStagingDirectory)'
+  
     
 - task: AzureWebApp@1
   displayName: Azure Web App Deploy
