@@ -32,6 +32,6 @@ steps:
     appType: 'webAppLinux'
     appName: 'dotnet1243'
     package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
-    runtimeStack: 'DOTNETCORE|3.0'
+    runtimeStack: 'DOTNETCORE|2.2'
 
 
